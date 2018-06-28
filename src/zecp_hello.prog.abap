@@ -6,4 +6,5 @@
 REPORT ZECP_HELLO.
 
 end-of-selection.
-  write: / |Hello, world!|.
+  data(greeter) = new zecp_greeter( 'Ohai' ).
+  write: / greeter->build_greeting( ).

@@ -25,10 +25,7 @@ class zecp_greeter implementation.
   endmethod.
 
   method build_greeting.
-    data(impl) = impl=>instance( ).
-    data(user_name) = impl->user_name( ).
-
-    greeting = |{ me->salutation } { user_name }!|.
+    greeting = |{ me->salutation } { sy-uname }!|.
   endmethod.
 
 endclass.
